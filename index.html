@@ -326,7 +326,35 @@
 
 
 
+                <br><br><br><br><br><br><br><br><br><br>
+                <section class="section contact">
 
+                        <div class="row gy-4">
+                                <form action="/success/" method="post" data-netlify="true"
+                                        data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                                        <div class="fields">
+                                                <div class="field half">
+                                                        <label for="name">Name</label>
+                                                        <input type="text" name="name" class="form-control">
+                                                </div>
+                                                <div class="field half">
+                                                        <label for="name">Email</label>
+                                                        <input type="text" name="Email" class="form-control">
+                                                </div>
+                                                <div class="field">
+                                                        <label for="message">Message</label>
+                                                        <textarea name="message" id="message" cols="30"
+                                                                rows="10"></textarea>
+                                                </div>
+                                        </div>
+                                        <div data-netlify-recaptcha="true"></div>
+                                        <ul class="action">
+                                                <li><input type="submit" value="Send Message" class="primary"></li>
+                                                <li><input type="reset" value="Clear"></li>
+                                        </ul>
+                                </form>
+                        </div>
+                </section>
 
 
 
