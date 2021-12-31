@@ -329,3 +329,37 @@
   }
 
 })();
+
+
+
+
+
+
+
+
+
+
+/** contact **/
+
+const btn = document.querySelector('button')
+const inputs = document.querySelector('form')
+btn.addEventListener('click', () => {
+
+	const name = (inputs.elements["name"].value).trim()
+	const email = (inputs.elements["email"].value.trim())
+	const subject = (inputs.elements["subject"].value.trim())
+	const message = (inputs.elements["message"].value.trim())
+	if (!name.length > 0 || !email.length > 0 || !message.length > 0) {
+		alert("All fields are mandatory")
+		return
+	}
+	Email.send({
+		Host: "smtp.mailtrap.io",
+		Username: "38c39ae7ba33a2",
+		Password: "19a78ac81ac0a8",
+		To: "xyzxyz@gmail.com",
+		From: inputs.elements["email"].value,
+		Subject: "Contact Us Query By the Customer",
+		Body: name + "<br>" + email + "<br>" + subject + "<br>" + message
+	}).then(msg => alert("The email successfully sent"))
+})
